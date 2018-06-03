@@ -1,0 +1,36 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 8769
+spring:
+  application:
+    name: service-zuul
+zuul:
+  routes:
+    consume-a:
+#    “/consume/”只能匹配一个层级, 但”/consume/**“可以匹配多级.
+      path: /consume/**
+      serviceId: service-hi
+#      url: http://localhost:8764/consume-a/
+    api-b:
+      path: /api-b/**
+      serviceId: service-feign
+#  所有的服务都会被忽略，除了“consume”
+  ignored-services: '*'
+management:
+  server:
+    port: 9000
+    address: localhost
+  endpoints:
+    web:
+      exposure:
+#      启动所有监控endpoint  访问地址http://localhost:9000/actuator/routes
+#https://blog.csdn.net/chenqipc/article/details/53322830
+        include: '*'
+security: false
+info:
+  aaa:
+    name: xxx
+    email: xxx@qq.com
