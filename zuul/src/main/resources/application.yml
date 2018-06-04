@@ -7,6 +7,9 @@ server:
 spring:
   application:
     name: service-zuul
+#SERVICE-HI:
+#  ribbon:
+#    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
 zuul:
   routes:
     consume-a:

@@ -21,12 +21,12 @@ public class ConsumeAApplication {
 		return new RestTemplate();
 	}
 //https://blog.csdn.net/rickiyeat/article/details/64918756
-	@Bean
+/*	@Bean
 	public IRule ribbonRule() {
 		//这里配置策略，和配置文件对应
-//		return new RandomRule();
-		return new WeightedResponseTimeRule();
-	}
+		return new RandomRule();
+//		return new WeightedResponseTimeRule();
+	}*/
 
 	public static void main(String[] args) {
 		SpringApplication.run(ConsumeAApplication.class, args);

@@ -9,9 +9,9 @@ server:
 spring:
   application:
     name: comsume-ribbon
-#comsume-ribbon:
-#  ribbon:
-#    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+SERVICE-HI:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
 #    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.WeightedResponseTimeRule
 #    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule
 
