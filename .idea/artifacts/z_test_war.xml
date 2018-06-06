@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="z-test:war">
+    <output-path>$PROJECT_DIR$/z-test/target</output-path>
+    <root id="archive" name="z-test-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="z-test:war exploded" />
+    </root>
+  </artifact>
+</component>

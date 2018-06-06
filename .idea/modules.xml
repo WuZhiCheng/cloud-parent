@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/registry/registry.iml" filepath="$PROJECT_DIR$/registry/registry.iml" />
       <module fileurl="file://$PROJECT_DIR$/service-a/service-a.iml" filepath="$PROJECT_DIR$/service-a/service-a.iml" />
       <module fileurl="file://$PROJECT_DIR$/service-b/service-b.iml" filepath="$PROJECT_DIR$/service-b/service-b.iml" />
+      <module fileurl="file://$PROJECT_DIR$/z-test/z-test.iml" filepath="$PROJECT_DIR$/z-test/z-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/zuul/zuul.iml" filepath="$PROJECT_DIR$/zuul/zuul.iml" />
     </modules>
   </component>

@@ -2,6 +2,7 @@ package com.example.zuul;
 
 import com.netflix.loadbalancer.IRule;
 import com.netflix.loadbalancer.RandomRule;
+import com.netflix.loadbalancer.WeightedResponseTimeRule;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
@@ -20,8 +21,8 @@ public class ZuulApplication {
 		@Bean
 	public IRule ribbonRule() {
 		//这里配置策略，和配置文件对应
-		return new RandomRule();
-//		return new WeightedResponseTimeRule();
+//		return new RandomRule();
+		return new WeightedResponseTimeRule();
 	}
 
 	public static void main(String[] args) {

@@ -20,6 +20,7 @@
         <module name="registry" />
         <module name="service-a" />
         <module name="service-b" />
+        <module name="z-test" />
         <module name="zuul" />
       </profile>
     </annotationProcessing>
@@ -29,6 +30,7 @@
       <module name="registry" target="1.8" />
       <module name="service-a" target="1.8" />
       <module name="service-b" target="1.8" />
+      <module name="z-test" target="1.8" />
       <module name="zuul" target="1.8" />
     </bytecodeTargetLevel>
   </component>
