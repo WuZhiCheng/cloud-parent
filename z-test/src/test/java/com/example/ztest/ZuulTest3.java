@@ -30,6 +30,8 @@ public class ZuulTest3 {
         final AtomicInteger errorNumTotal = new AtomicInteger(0);
 
 
+        配置zuul的tomcat
+
         HashMap<String, Object> paramMap = new HashMap<>();
         for (int i = 0; i < 10; i++) {
             int num = 100;
@@ -57,7 +59,7 @@ public class ZuulTest3 {
                                 errorNum.addAndGet(1);
                                 errorNumTotal.addAndGet(1);
                             }
-                            System.out.println(result3);
+//                            System.out.println(result3);
                         } catch (Exception e) {
                             e.printStackTrace();
                             errorNum.addAndGet(1);
@@ -68,7 +70,7 @@ public class ZuulTest3 {
             }
 
             try {
-                Thread.sleep(1000);
+                Thread.sleep(100);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -77,7 +79,7 @@ public class ZuulTest3 {
             num83.set(0);
             errorNum.set(0);
     }
-        Thread.sleep(10000);
+        Thread.sleep(120000);
         System.out.println("resultTotal::::"+num82Total+",,"+num83Total+",,"+errorNumTotal);
 
     }

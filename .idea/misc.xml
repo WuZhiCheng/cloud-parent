@@ -5,6 +5,7 @@
     <file type="web" url="file://$PROJECT_DIR$/registry" />
     <file type="web" url="file://$PROJECT_DIR$/service-a" />
     <file type="web" url="file://$PROJECT_DIR$/service-b" />
+    <file type="web" url="file://$PROJECT_DIR$/service-c" />
     <file type="web" url="file://$PROJECT_DIR$/z-test" />
     <file type="web" url="file://$PROJECT_DIR$/zuul" />
   </component>
@@ -13,6 +14,7 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/z-test/pom.xml" />
+        <option value="$PROJECT_DIR$/service-c/pom.xml" />
       </list>
     </option>
   </component>

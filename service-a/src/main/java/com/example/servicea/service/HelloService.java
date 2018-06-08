@@ -24,6 +24,11 @@ public class HelloService {
 
     @RequestMapping("/hi")
     public String home(@RequestParam String name) {
+        try {
+            Thread.sleep(100);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         System.out.println(	"hi:"+name);
         return "hi "+name+",i am from port:" +port;
     }
