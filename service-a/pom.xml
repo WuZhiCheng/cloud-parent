@@ -33,7 +33,7 @@
 		</dependency>
 	<!--	<dependency>
 
-		<!--断路器-->
+		<!- -断路器-->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>

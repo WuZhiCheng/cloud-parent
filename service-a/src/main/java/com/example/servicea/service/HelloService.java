@@ -28,7 +28,7 @@ public class HelloService {
     @RequestMapping("/hi")
 //    public String home(@RequestParam String name) {
     public String home(@RequestBody String name) {
-        try {
+//        try {
 //    @HystrixCommand(fallbackMethod="helloFallbackMethod")/*调用方式失败后调用helloFallbackMethod*/
 //    public String home(@RequestParam String name) {
      /*   try {
@@ -45,6 +45,7 @@ public class HelloService {
     }
 
 
+    @HystrixCommand(fallbackMethod="helloFallbackMethod")
     @RequestMapping("/user")
 //    public String home(@RequestParam String name) {
     public String user(@RequestBody User user) {
@@ -58,7 +59,8 @@ public class HelloService {
         System.out.println(	"hi:"+user);
         return "hi "+user+",i am from port:" +port;
     }
-    public String helloFallbackMethod(String fallback){
-        return "fallback 参数值为:"+fallback;
+
+    public String helloFallbackMethod(User user, Throwable e){
+        return "fallback 参数值为:"+user+"  fail reason:"+e;
     }
 }
