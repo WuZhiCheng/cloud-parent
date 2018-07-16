@@ -4,6 +4,9 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
 server:
   port: 8769
+  tomcat:
+    max-threads: 300
+    max-connections: 600
 spring:
   application:
     name: service-zuul

@@ -30,11 +30,11 @@ public class ZuulTest3 {
         final AtomicInteger errorNumTotal = new AtomicInteger(0);
 
 
-        配置zuul的tomcat
+//        配置zuul的tomcat
 
         HashMap<String, Object> paramMap = new HashMap<>();
-        for (int i = 0; i < 10; i++) {
-            int num = 100;
+        for (int i = 0; i < 4; i++) {
+            int num = 300;
             CountDownLatch countDownLatch = new CountDownLatch(num);
             for (int j = 0; j < num; j++) {
                 new Thread(new Runnable() {
@@ -70,16 +70,23 @@ public class ZuulTest3 {
             }
 
             try {
-                Thread.sleep(100);
+                Thread.sleep(20000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            System.out.println("result::::"+num82+",,"+num83+",,"+errorNum);
+            if(i>=1){
+                System.out.println("result::::"+num82+",,"+num83+",,"+errorNum);
+            }
             num82.set(0);
             num83.set(0);
             errorNum.set(0);
+            if (i==0){
+                num82Total.set(0);
+                num83Total.set(0);
+                errorNumTotal.set(0);
+            }
     }
-        Thread.sleep(120000);
+        Thread.sleep(30000);
         System.out.println("resultTotal::::"+num82Total+",,"+num83Total+",,"+errorNumTotal);
 
     }

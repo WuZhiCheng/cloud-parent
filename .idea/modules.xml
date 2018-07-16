@@ -3,7 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/cloud-parent.iml" filepath="$PROJECT_DIR$/.idea/cloud-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
       <module fileurl="file://$PROJECT_DIR$/consume-a/consume-a.iml" filepath="$PROJECT_DIR$/consume-a/consume-a.iml" />
+      <module fileurl="file://$PROJECT_DIR$/consume-fegin-hystrix/consume-fegin-hystrix.iml" filepath="$PROJECT_DIR$/consume-fegin-hystrix/consume-fegin-hystrix.iml" />
+      <module fileurl="file://$PROJECT_DIR$/consume-feign/consume-feign.iml" filepath="$PROJECT_DIR$/consume-feign/consume-feign.iml" />
       <module fileurl="file://$PROJECT_DIR$/registry/registry.iml" filepath="$PROJECT_DIR$/registry/registry.iml" />
       <module fileurl="file://$PROJECT_DIR$/service-a/service-a.iml" filepath="$PROJECT_DIR$/service-a/service-a.iml" />
       <module fileurl="file://$PROJECT_DIR$/service-b/service-b.iml" filepath="$PROJECT_DIR$/service-b/service-b.iml" />

@@ -1,0 +1,14 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:20100/eureka/
+server:
+  port: 8765
+  servlet:
+    context-path: /consume-f
+spring:
+  application:
+    name: comsume-f
+#SERVICE-HI:
+#  ribbon:
+#    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule

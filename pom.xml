@@ -25,6 +25,8 @@
 		<module>service-c</module>
 		<module>consume-a</module>
 		<module>zuul</module>
+		<module>z-test</module>
+		<module>consume-feign</module>
 	</modules>
 
 	<properties>

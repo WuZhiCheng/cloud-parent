@@ -1,6 +1,8 @@
 package com.example.servicea.service;
 
+import com.example.common.pojo.User;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,7 +25,8 @@ public class HelloService {
     String port;
 
     @RequestMapping("/hi")
-    public String home(@RequestParam String name) {
+//    public String home(@RequestParam String name) {
+    public String home(@RequestBody String name) {
         try {
             Thread.sleep(100);
         } catch (InterruptedException e) {
@@ -32,4 +35,24 @@ public class HelloService {
         System.out.println(	"hi:"+name);
         return "hi "+name+",i am from port:" +port;
     }
+
+
+    @RequestMapping("/user")
+//    public String home(@RequestParam String name) {
+    public String user(@RequestBody User user) {
+    /*    try {
+            Thread.sleep(100);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }*/
+        int a = 0;
+        System.out.println(2/a);
+        System.out.println(	"hi:"+user);
+        return "hi "+user+",i am from port:" +port;
+    }
+
+
 }
+
+
+

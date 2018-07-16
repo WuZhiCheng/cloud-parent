@@ -2,6 +2,7 @@
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/consume-a" />
+    <file type="web" url="file://$PROJECT_DIR$/consume-feign" />
     <file type="web" url="file://$PROJECT_DIR$/registry" />
     <file type="web" url="file://$PROJECT_DIR$/service-a" />
     <file type="web" url="file://$PROJECT_DIR$/service-b" />
@@ -15,6 +16,9 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/z-test/pom.xml" />
         <option value="$PROJECT_DIR$/service-c/pom.xml" />
+        <option value="$PROJECT_DIR$/consume-feign/pom.xml" />
+        <option value="$PROJECT_DIR$/common/pom.xml" />
+        <option value="$PROJECT_DIR$/consume-fegin-hystrix/pom.xml" />
       </list>
     </option>
   </component>
