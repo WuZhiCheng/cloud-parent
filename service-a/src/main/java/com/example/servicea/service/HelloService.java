@@ -1,6 +1,7 @@
 package com.example.servicea.service;
 
 import com.example.common.pojo.User;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,9 +29,16 @@ public class HelloService {
 //    public String home(@RequestParam String name) {
     public String home(@RequestBody String name) {
         try {
+//    @HystrixCommand(fallbackMethod="helloFallbackMethod")/*调用方式失败后调用helloFallbackMethod*/
+//    public String home(@RequestParam String name) {
+     /*   try {
             Thread.sleep(100);
         } catch (InterruptedException e) {
             e.printStackTrace();
+        }
+     */
+        if("1".equals(name)){
+            throw new RuntimeException("...");
         }
         System.out.println(	"hi:"+name);
         return "hi "+name+",i am from port:" +port;
@@ -50,9 +58,7 @@ public class HelloService {
         System.out.println(	"hi:"+user);
         return "hi "+user+",i am from port:" +port;
     }
-
-
+    public String helloFallbackMethod(String fallback){
+        return "fallback 参数值为:"+fallback;
+    }
 }
-
-
-

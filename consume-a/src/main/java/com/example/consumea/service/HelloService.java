@@ -25,6 +25,7 @@ public class HelloService {
 
     @Autowired
     RestTemplate restTemplate;
+    /** 未配置断路器*/
     public String hiService(String name) {
 //        ServiceInstance serviceInstance = this.loadBalancerClient.choose("service-hi");
 //        System.out.println("===" + ":" + serviceInstance.getServiceId() + ":" + serviceInstance.getHost() + ":"

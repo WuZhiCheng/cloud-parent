@@ -16,6 +16,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="config-client" />
+        <module name="config-server" />
         <module name="common" />
         <module name="consume-a" />
         <module name="consume-fegin-hystrix" />
@@ -30,6 +32,8 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="cloud-parent" target="1.8" />
+      <module name="config-client" target="1.8" />
+      <module name="config-server" target="1.8" />
       <module name="common" target="1.8" />
       <module name="consume-a" target="1.8" />
       <module name="consume-fegin-hystrix" target="1.8" />
