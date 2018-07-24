@@ -13,6 +13,9 @@ spring:
 #SERVICE-HI:
 #  ribbon:
 #    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+ribbon:
+  okhttp:
+    enabled: true
 zuul:
   routes:
     consume-a:

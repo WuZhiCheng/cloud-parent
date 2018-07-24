@@ -25,12 +25,21 @@ public class HelloService {
     @Value("${server.port}")
     String port;
 
+    @HystrixCommand(fallbackMethod="helloFallbackMethod")/*调用方式失败后调用helloFallbackMethod*/
+    @RequestMapping("/hiZuul")
+    public String homeRequestParamZuul(@RequestParam String name) {
+        return "hi "+name+",i am param  from Zuul port:" +port;
+    }
+
+    @HystrixCommand(fallbackMethod="helloFallbackMethod")/*调用方式失败后调用helloFallbackMethod*/
+    @RequestMapping("/hip")
+    public String homeRequestParam(@RequestParam String name) {
+        return "hi "+name+",i am param from port:" +port;
+    }
+
+    @HystrixCommand(fallbackMethod="helloFallbackMethod")/*调用方式失败后调用helloFallbackMethod*/
     @RequestMapping("/hi")
-//    public String home(@RequestParam String name) {
     public String home(@RequestBody String name) {
-//        try {
-//    @HystrixCommand(fallbackMethod="helloFallbackMethod")/*调用方式失败后调用helloFallbackMethod*/
-//    public String home(@RequestParam String name) {
      /*   try {
             Thread.sleep(100);
         } catch (InterruptedException e) {
@@ -45,22 +54,19 @@ public class HelloService {
     }
 
 
-    @HystrixCommand(fallbackMethod="helloFallbackMethod")
+    @HystrixCommand(fallbackMethod="userFallbackMethod")
     @RequestMapping("/user")
-//    public String home(@RequestParam String name) {
     public String user(@RequestBody User user) {
-    /*    try {
-            Thread.sleep(100);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }*/
         int a = 0;
         System.out.println(2/a);
         System.out.println(	"hi:"+user);
         return "hi "+user+",i am from port:" +port;
     }
-
-    public String helloFallbackMethod(User user, Throwable e){
+      /**,Throwable e 为可选参数*/
+    public String helloFallbackMethod(String fallback, Throwable e){
+            return "fallback 参数值为:" + fallback;
+        }
+    public String userFallbackMethod(User user, Throwable e){
         return "fallback 参数值为:"+user+"  fail reason:"+e;
     }
 }

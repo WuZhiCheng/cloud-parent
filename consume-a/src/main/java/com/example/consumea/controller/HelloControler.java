@@ -27,5 +27,11 @@ public class HelloControler {
         return "HelloControler:::::"+helloService.hiService(name);
     }
 
+    /** 先调用zuul，再转发到service*/
+    @RequestMapping(value = "/hiZul")
+    public String hiZul(@RequestParam String name){
+        return "HelloControler:::::"+helloService.hiServiceZuul(name+"  zuul");
+    }
+
 
 }

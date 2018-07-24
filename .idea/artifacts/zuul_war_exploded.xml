@@ -7,6 +7,8 @@
           <element id="module-output" name="zuul" />
         </element>
         <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: com.squareup.okhttp3:okhttp:3.8.1" />
+          <element id="library" level="project" name="Maven: com.squareup.okio:okio:1.13.0" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-web:2.0.2.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter:2.0.2.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot:2.0.2.RELEASE" />

@@ -25,12 +25,21 @@ public class HelloService {
 
     @Autowired
     RestTemplate restTemplate;
-    /** 未配置断路器*/
+    /** 未配置断路器，直接调用service*/
     public String hiService(String name) {
 //        ServiceInstance serviceInstance = this.loadBalancerClient.choose("service-hi");
 //        System.out.println("===" + ":" + serviceInstance.getServiceId() + ":" + serviceInstance.getHost() + ":"
 //                + serviceInstance.getPort());// 打印当前调用服务的信息
-        return restTemplate.getForObject("http://SERVICE-HI/hi" +
+        return restTemplate.getForObject("http://SERVICE-HI/hip" +
+                "?name="+name,String.class);
+    }
+
+    /** 未配置断路器，试下调用Zuul*/
+    public String hiServiceZuul(String name) {
+//        ServiceInstance serviceInstance = this.loadBalancerClient.choose("service-hi");
+//        System.out.println("===" + ":" + serviceInstance.getServiceId() + ":" + serviceInstance.getHost() + ":"
+//                + serviceInstance.getPort());// 打印当前调用服务的信息
+        return restTemplate.getForObject("http://service-zuul/consume/hiZuul" +
                 "?name="+name,String.class);
     }
 

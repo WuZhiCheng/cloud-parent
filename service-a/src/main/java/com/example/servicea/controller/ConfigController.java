@@ -1,3 +1,4 @@
+/*
 package com.example.servicea.controller;
 
 import org.springframework.beans.factory.annotation.Value;
@@ -5,6 +6,7 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+*/
 /**
  * All rights Reserved, Designed By a.96bill.com
  *
@@ -15,7 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
  * @author: wuzhicheng
  * @date: 9:04 2018/7/8/008
  * @company:北京今汇在线
- */
+ *//*
+
 @RestController
 @RefreshScope
 public class ConfigController {
@@ -39,3 +42,4 @@ public class ConfigController {
         return "id:" + id + " desc:" + desc + " db:" + db;
     }
 }
+*/
